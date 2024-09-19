@@ -10,25 +10,24 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Connect UI to controller
     final BottomNavController bottomNavController = Get.put(BottomNavController());
 
     final List<Widget> menus = [Home(), History(), Profile()];
 
     return Obx(() {
       return Scaffold(
-        backgroundColor: Colors.black,  // Set the background color to black
+        backgroundColor: Colors.black,
         body: menus[bottomNavController.selectedIndex.value],
         bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Colors.black, // Set the background color to black for the BottomNavigationBar
-          selectedItemColor: Colors.white, // Change the color of selected item
-          unselectedItemColor: Colors.grey, // Change the color of unselected items
+          backgroundColor: Colors.black,
+          selectedItemColor: Colors.white,
+          unselectedItemColor: Colors.grey,
           currentIndex: bottomNavController.selectedIndex.value,
           onTap: bottomNavController.changeIndexMenu,
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: "Home"),
-            BottomNavigationBarItem(icon: Icon(Icons.history_outlined), label: "History"),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
+            BottomNavigationBarItem(icon: Icon(Icons.search), label: "History"),
+            BottomNavigationBarItem(icon: Icon(Icons.library_books_outlined), label: "Profile"),
           ],
         ),
       );

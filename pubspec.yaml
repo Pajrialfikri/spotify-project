@@ -19,4 +19,14 @@ dev_dependencies:
   flutter_lints: ^4.0.0
 
 flutter:
+  assets:
+    - assets/images/liked_song.png
+    - assets/images/cigarettes_after_sex.jpeg
+    - assets/images/ndx_aka.jpeg
+    - assets/images/didi.jpeg
+    - assets/images/dj_virall.jpeg
+    - assets/images/playlist_gondes.jpeg
+    - assets/images/mgmt.jpeg
+    - assets/images/galau_versi_jawa.jpeg
+
   uses-material-design: true
