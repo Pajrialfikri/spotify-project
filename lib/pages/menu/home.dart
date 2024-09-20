@@ -58,13 +58,23 @@ class Home extends StatelessWidget {
                 child: Row(
                   children: [
                     JumpBackInTile(
-                      title: 'CALON TARUNA',
-                      imagePath: 'assets/images/mgmt.jpeg',
+                      title: 'Cigarettes After Sex',
+                      imagePath: 'assets/images/cigarettes_after_sex.jpeg',
                     ),
                     SizedBox(width: 16),
                     JumpBackInTile(
-                      title: 'Lagu enak buat tidur',
-                      imagePath: 'assets/images/mgmt.jpeg',
+                      title: 'NDX A.K.A.',
+                      imagePath: 'assets/images/ndx_aka.jpeg',
+                    ),
+                    SizedBox(width: 16),
+                    JumpBackInTile(
+                      title: 'PLAYLIST GONDES',
+                      imagePath: 'assets/images/playlist_gondes.jpeg',
+                    ),
+                    SizedBox(width: 16),
+                    JumpBackInTile(
+                      title: 'Didi',
+                      imagePath: 'assets/images/didi.jpeg',
                     ),
                   ],
                 ),

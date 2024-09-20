@@ -11,7 +11,9 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.8
-  get: ^4.6.5  # Add this line for GetX package
+  get: ^4.6.5
+  video_player: ^2.5.2
+
 
 dev_dependencies:
   flutter_test:
@@ -28,5 +30,10 @@ flutter:
     - assets/images/playlist_gondes.jpeg
     - assets/images/mgmt.jpeg
     - assets/images/galau_versi_jawa.jpeg
+    - assets/images/live_events.jpg
+    - assets/images/made_for_you.png
+    - assets/images/music.jpeg
+    - assets/images/podcasts.jpeg
+    - assets/videos/satu_bulan.mp4
 
   uses-material-design: true

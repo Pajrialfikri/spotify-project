@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:spotify_project/controller/bottom_nav_controller.dart';
 import 'package:spotify_project/pages/menu/profile.dart';
-import 'package:spotify_project/pages/menu/history.dart';
+
 import 'package:spotify_project/pages/menu/home.dart';
+import 'package:spotify_project/pages/menu/search.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -12,7 +13,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final BottomNavController bottomNavController = Get.put(BottomNavController());
 
-    final List<Widget> menus = [Home(), History(), Profile()];
+    final List<Widget> menus = [Home(), Search(), Profile()];
 
     return Obx(() {
       return Scaffold(
