@@ -1,4 +1,8 @@
+// search.dart
 import 'package:flutter/material.dart';
+import 'package:spotify_project/widgets/search_bar.dart';
+import 'package:spotify_project/widgets/grid_item.dart';
+import 'package:spotify_project/widgets/genre_item.dart';
 
 class Search extends StatelessWidget {
   @override
@@ -9,7 +13,7 @@ class Search extends StatelessWidget {
         title: Row(
           children: [
             CircleAvatar(
-              backgroundImage: AssetImage('assets/images/liked_song.png'), // Ganti dengan gambar profil Anda
+              backgroundImage: AssetImage('assets/images/profile.jpg'),
             ),
             SizedBox(width: 10),
             Text('Search'),
@@ -31,23 +35,8 @@ class Search extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Search Bar
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                child: TextField(
-                  decoration: InputDecoration(
-                    hintText: 'What do you want to listen to?',
-                    prefixIcon: Icon(Icons.search),
-                    border: InputBorder.none,
-                  ),
-                ),
-              ),
+              CustomSearchBar(), // Custom search bar widget
               SizedBox(height: 20),
-
-              // Start browsing
               Text(
                 'Start browsing',
                 style: TextStyle(
@@ -67,15 +56,13 @@ class Search extends StatelessWidget {
                   childAspectRatio: 3 / 2,
                 ),
                 children: [
-                  _buildGridItem('Music', Colors.pink, 'assets/images/liked_song.png'),
-                  _buildGridItem('Podcasts', Colors.green, 'assets/images/liked_song.png'),
-                  _buildGridItem('Live Events', Colors.purple, 'assets/images/liked_song.png'),
-                  _buildGridItem('K-Pop ON! Hub', Colors.blue, 'assets/images/liked_song.png'),
+                  GridItem(title: 'Music', color: Colors.pink, image: 'assets/images/music.jpeg'),
+                  GridItem(title: 'Podcasts', color: Colors.green, image: 'assets/images/podcasts.jpeg'),
+                  GridItem(title: 'Live Events', color: Colors.purple, image: 'assets/images/live_events.jpg'),
+                  GridItem(title: 'Made For You', color: Colors.blue, image: 'assets/images/made_for_you.png'),
                 ],
               ),
               SizedBox(height: 20),
-
-              // Explore your genres
               Text(
                 'Explore your genres',
                 style: TextStyle(
@@ -95,61 +82,42 @@ class Search extends StatelessWidget {
                   childAspectRatio: 2 / 3,
                 ),
                 children: [
-                  _buildGenreItem('#indonesian pop', 'assets/images/liked_song.png'),
-                  _buildGenreItem('#downtown vibes', 'assets/images/liked_song.png'),
-                  _buildGenreItem('#melancholy', 'assets/images/liked_song.png'),
+                  GenreItem(genre: '#indonesian pop', image: 'assets/images/tulus.png'),
+                  GenreItem(genre: '#downtown vibes', image: 'assets/images/cinnamon_girl.png'),
+                  GenreItem(genre: '#melancholy', image: 'assets/images/space_song.png'),
+                ],
+              ),
+              SizedBox(height: 20),
+              Text(
+                'Browse all',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 10),
+              GridView(
+                shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 10,
+                  childAspectRatio: 3 / 2,
+                ),
+                children: [
+                  GridItem(title: 'Made For You', color: Colors.blue, image: 'assets/images/made_for_you.png'),
+                  GridItem(title: 'New Released', color: Colors.pink, image: 'assets/images/new_releases.jpeg'),
+                  GridItem(title: 'Live Events', color: Colors.purple, image: 'assets/images/live_events.jpg'),
+                  GridItem(title: 'Pop', color: Colors.green, image: 'assets/images/pop.jpeg'),
+                  GridItem(title: 'Indie', color: Colors.purple, image: 'assets/images/indie.jpeg'),
+                  GridItem(title: 'Musik Indonesia', color: Colors.pink, image: 'assets/images/musik_indonesia.jpeg'),
+                  GridItem(title: 'K-Pop', color: Colors.green, image: 'assets/images/k_pop.jpeg'),
+                  GridItem(title: 'Podcast Charts', color: Colors.purple, image: 'assets/images/podcast_charts.jpeg'),
                 ],
               ),
             ],
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget _buildGridItem(String title, Color color, String image) {
-    return Container(
-      decoration: BoxDecoration(
-        color: color,
-        borderRadius: BorderRadius.circular(8),
-        image: DecorationImage(
-          image: AssetImage(image),
-          fit: BoxFit.cover,
-        ),
-      ),
-      child: Center(
-        child: Text(
-          title,
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget _buildGenreItem(String genre, String image) {
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(8),
-        image: DecorationImage(
-          image: AssetImage(image),
-          fit: BoxFit.cover,
-        ),
-      ),
-      child: Align(
-        alignment: Alignment.bottomCenter,
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text(
-            genre,
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 14,
-              fontWeight: FontWeight.bold,
-            ),
           ),
         ),
       ),

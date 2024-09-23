@@ -34,6 +34,39 @@ flutter:
     - assets/images/made_for_you.png
     - assets/images/music.jpeg
     - assets/images/podcasts.jpeg
-    - assets/videos/satu_bulan.mp4
+    - assets/images/tulus.png
+    - assets/images/cinnamon_girl.png
+    - assets/images/space_song.png
+    - assets/images/made1.png
+    - assets/images/made2.png
+    - assets/images/made3.png
+    - assets/images/made4.png
+    - assets/images/made5.png
+    - assets/images/made6.png
+    - assets/images/made7.png
+    - assets/images/satu_bulan.png
+    - assets/images/sayang_nyuwun.png
+    - assets/images/cry.png
+    - assets/images/calon_taruna.png
+    - assets/images/diary_by_mpk.png
+    - assets/images/pasming_based.png
+    - assets/images/maman_fvndy.png
+    - assets/images/new_releases.jpeg
+    - assets/images/pop.jpeg
+    - assets/images/indie.jpeg
+    - assets/images/musik_indonesia.jpeg
+    - assets/images/k_pop.jpeg
+    - assets/images/podcast_charts.jpeg
+    - assets/images/podcast_new_releases.jpeg
+    - assets/images/video_podcast.jpeg
+    - assets/images/only_on_spotify.jpeg
+    - assets/images/charts.jpg
+    - assets/images/in_the_car.jpeg
+    - assets/images/hiphop.jpeg
+    - assets/images/rock.jpeg
+    - assets/images/rnb.jpeg
+    - assets/images/discover.jpeg
+    - assets/images/dance_or_electronic.jpeg
+    - assets/images/profile.jpg
 
   uses-material-design: true

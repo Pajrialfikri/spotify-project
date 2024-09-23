@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:spotify_project/controller/bottom_nav_controller.dart';
-import 'package:spotify_project/pages/menu/profile.dart';
-
+import 'package:spotify_project/pages/menu/library.dart';
 import 'package:spotify_project/pages/menu/home.dart';
 import 'package:spotify_project/pages/menu/search.dart';
 
@@ -13,7 +12,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final BottomNavController bottomNavController = Get.put(BottomNavController());
 
-    final List<Widget> menus = [Home(), Search(), Profile()];
+    final List<Widget> menus = [Home(), Search(), Library()];
 
     return Obx(() {
       return Scaffold(
@@ -27,8 +26,8 @@ class HomePage extends StatelessWidget {
           onTap: bottomNavController.changeIndexMenu,
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: "Home"),
-            BottomNavigationBarItem(icon: Icon(Icons.search), label: "History"),
-            BottomNavigationBarItem(icon: Icon(Icons.library_books_outlined), label: "Profile"),
+            BottomNavigationBarItem(icon: Icon(Icons.search), label: "Search"),
+            BottomNavigationBarItem(icon: Icon(Icons.library_music), label: "Library"),
           ],
         ),
       );
